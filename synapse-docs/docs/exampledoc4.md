@@ -8,18 +8,11 @@ sidebar_label: API
 
 > 本文档参数更新有延迟，如有出入请以最新代码为准
 
-- [`block`](#block)
-
-  - [`/block/tip`](#/block/tip)
-  - [`/block/feeRate`](#/block/feeRate)
-  - [`/block/{height}`](#/block/{height})
-
 - [`address`](#address)
 
   - [`/address/{lockHash}`](#/address/{lockHash})
 
 - [`cell`](#cell)
-  - [`/cell/getTxHistories`](#/cell/getTxHistories) //
   - [`/cell/getUnspentCells`](#/cell/getUnspentCells)
   - [`/cell/getCellsByLockHashAndTypeScriptss`](#/cell/getCellsByLockHashAndTypeScripts)
   - [`/cell/getTxHistoriesByLockHash`](#/cell/getTxHistoriesByLockHash)
@@ -38,7 +31,7 @@ Returns the address info of by lockHash.
 - 请求方式: Get
 
 ```bash
-curl -X GET http://106.13.40.34:2333/address/0x98ddfc5f3e0836ee1bda3ebef2f0156abb74b632dc9c6a412dce53a13e4c6fdb
+curl -X GET http://{localhost:port}/address/0x98ddfc5f3e0836ee1bda3ebef2f0156abb74b632dc9c6a412dce53a13e4c6fdb
 
 ```
 
@@ -66,7 +59,7 @@ Returns unspentCells by search params.
 
 ```bash
 
-curl -X GET "http://106.13.40.34:2333/cell/getUnspentCells?lockHash=0x5d67b4eeb98698535f76f1b34a77d852112a35072eb6b834cb4cc8868ac02fb2&status=live&limit=10&hasData=true"
+curl -X GET "http://{localhost:port}/cell/getUnspentCells?lockHash=0x5d67b4eeb98698535f76f1b34a77d852112a35072eb6b834cb4cc8868ac02fb2&status=live&limit=10&hasData=true"
 
 ```
 
@@ -137,7 +130,7 @@ Returns transaction list by lockHash.
 
 ```bash
 
-curl 'http://106.13.40.34:2333/cell/getTxHistoriesByLockHash' \
+curl 'http://{localhost:port}/cell/getTxHistoriesByLockHash' \
   -H 'Connection: keep-alive' \
   -H 'Accept: application/json, text/plain, */*' \
   -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36' \
@@ -235,7 +228,7 @@ Returns cells information by lockHash and typeScripts.
 
 ```bash
 
-curl 'http://106.13.40.34:2333/cell/getCellsByLockHashAndTypeScripts' \
+curl 'http://{localhost:port}/cell/getCellsByLockHashAndTypeScripts' \
   -H 'Connection: keep-alive' \
   -H 'Accept: application/json, text/plain, */*' \
   -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36' \
@@ -288,7 +281,7 @@ Returns unspent cells total capacity.
 
 ```bash
 
-curl 'http://106.13.40.34:2333/cell/getUnspentCapacity/?lockHash=0x5d67b4eeb98698535f76f1b34a77d852112a35072eb6b834cb4cc8868ac02fb2' \
+curl 'http://{localhost:port}/cell/getUnspentCapacity/?lockHash=0x5d67b4eeb98698535f76f1b34a77d852112a35072eb6b834cb4cc8868ac02fb2' \
   -H 'Connection: keep-alive' \
   -H 'Accept: application/json, text/plain, */*' \
   -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36' \
