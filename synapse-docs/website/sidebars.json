@@ -1,10 +1,9 @@
 {
   "docs": {
-    "Docusaurus": ["doc1"],
-    "First Category": ["doc2"],
-    "Second Category": ["doc3"]
+    "SDK": ["doc1"],
+    "wallets data structure": ["doc2"]
   },
   "docs-other": {
-    "First Category": ["doc4", "doc5"]
+    "API": ["doc4", "doc5"]
   }
 }

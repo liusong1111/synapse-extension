@@ -1,9 +1,3 @@
----
-id: doc1
-title: SDK
-sidebar_label: SDK
----
-
 # Synapse sdk
 
 DApp demo: https://github.com/rebase-network/simplestdapp/
