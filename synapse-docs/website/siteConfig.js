@@ -16,7 +16,7 @@ const users = [
 const siteConfig = {
   title: 'Synapse Docs', // Title for your website.
   tagline: 'Welcome to Synapse Docs',
-  url: '', // Your website URL
+  url: 'https://your-docusaurus-test-site.com', // Your website URL
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
@@ -31,9 +31,14 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'sdk', label: 'Docs'},
-    {href: 'https://github.com/synapse-extension', label: 'GitHub', external: true},
+    {doc: 'doc1', label: 'Docs'},
+    {doc: 'doc4', label: 'API'},
+    {page: 'help', label: 'Help'},
+    {blog: true, label: 'Blog'},
   ],
+
+  // If you have users set above, you add it here:
+  users,
 
   /* path to images for header/footer */
   headerIcon: 'img/favicon.png',
