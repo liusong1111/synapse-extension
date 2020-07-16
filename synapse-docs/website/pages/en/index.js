@@ -89,13 +89,31 @@ class Index extends React.Component {
         <MarkdownBlock>These are features of this project</MarkdownBlock>
       </div>
     );
-    const content = ``;
+    const content = `
+      ### Installation for developer
+
+      1. Complete the steps to build the project above
+      2. Go to [_chrome://extensions_](chrome://extensions) in Google Chrome
+      3. With the developer mode checkbox ticked, click **Load unpacked extension...** and select the _dist_ folder from this repo
+
+      ### Installation for non-developer
+
+      1. Download the latest released zip file: https://github.com/rebase-network/synapse-extension/releases
+
+      2. Uncompress synapse-extension.zip, you will get a folder named \`synapse-extension\`
+
+      3. Open Chrome \`chrome://extensions/\`, enable \`Developer mode\`
+
+      4. Click \`Load unpacked\` button, select \`synapse-extension\` folder
+
+      5. You will see synapse extension icon on you tool bar
+    `;
 
     const TryOut = () => (
       <Block id="try">
         {[
           {
-            content: '123',
+            content: content,
             image: `${baseUrl}img/undraw_code_review.svg`,
             imageAlign: 'left',
             title: 'How to install',
